@@ -663,7 +663,7 @@ function PortfolioContent() {
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 dark:from-white/10 dark:to-white/5 rounded-[3rem] opacity-20 group-hover:opacity-40 blur-xl transition-opacity" />
               <div className="relative aspect-[3/4] overflow-hidden rounded-[2.5rem] border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5 max-w-sm">
                 <img 
-                  src="/about.png" 
+                  src="/About.png" 
                   alt="Chetna Padhi"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"
                 />

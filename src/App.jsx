@@ -961,7 +961,7 @@ function PortfolioContent() {
                   <input 
                     type="email" 
                     required 
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                     placeholder="john@example.com"
                     className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-white transition-colors text-white placeholder:text-gray-500"
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}

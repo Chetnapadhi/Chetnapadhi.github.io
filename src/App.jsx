@@ -24,6 +24,7 @@ import {
   Download,
   ChevronDown,
   ChevronRight,
+  ChevronUp,
   Users,
   CheckCircle2,
   Briefcase,
@@ -762,7 +763,11 @@ function PortfolioContent() {
                           className="text-[10px] font-black uppercase tracking-widest flex items-center gap-2 hover:translate-x-1 transition-transform"
                         >
                           {expandedExperience === i ? 'Show Less' : 'Read More'}
-                          <ChevronRight className={`w-4 h-4 transition-transform ${expandedExperience === i ? 'rotate-90' : ''}`} />
+                          {expandedExperience === i ? (
+                            <ChevronUp className="w-4 h-4" />
+                          ) : (
+                            <ChevronRight className="w-4 h-4" />
+                          )}
                         </button>
                         <a href={exp.link} target="_blank" rel="noreferrer" className="text-[10px] font-black uppercase tracking-widest opacity-30 hover:opacity-100 transition-opacity flex items-center gap-2">
                           Website <ExternalLink className="w-3 h-3" />

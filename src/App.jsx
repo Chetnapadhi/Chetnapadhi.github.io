@@ -107,7 +107,7 @@ const experiences = [
   {
     company: "Bhavya Foundation",
     period: "Jan 2024 – Apr 2024",
-    role: "Technical Lead",
+    role: "Web Developer",
     link: "https://bhavyafoundation.com",
     description: "Led development of full donation management platform",
     keyResponsibilities: [
@@ -140,9 +140,9 @@ const projects = [
     period: "2025",
     tech: ["Flutter", "Firebase", "BLE", "TensorFlow Lite", "Node.js", "MongoDB", "ML Kit"],
     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=500&fit=crop",
-    highlights: ["State-Level Winner", "Zero Proxy Attendance", "ML Face Recognition"],
+    highlights: ["State-Level Competition", "Zero Proxy Attendance", "ML Face Recognition"],
     shortDesc: "Next-gen smart attendance platform with facial recognition and BLE proximity detection.",
-    overview: "Attendify is a next-generation smart attendance platform designed to completely eliminate proxy attendance while making classroom attendance seamless for both teachers and students. Developed and showcased at Tantravihar, a prestigious state-level tech fest, the project gained strong industry interest and real-world implementation opportunities.",
+    overview: "Attendify is a next-generation smart attendance platform designed to completely eliminate proxy attendance while making classroom attendance seamless for both teachers and students. Participated and showcased at Tantravihar, a prestigious state-level tech fest, where the project gained strong industry interest and real-world implementation opportunities.",
     features: [
       {
         title: "Security & Anti-Proxy Mechanism",
@@ -607,9 +607,6 @@ function PortfolioContent() {
             </a>
             <a href="https://www.linkedin.com/in/chetna-padhi/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 transition-all">
               <Linkedin className="h-5 w-5 md:h-6 md:w-6" />
-            </a>
-            <a href="https://www.instagram.com/chetna_padhi/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 transition-all">
-              <Instagram className="h-5 w-5 md:h-6 md:w-6" />
             </a>
             <a href="mailto:padhichetn@gmail.com" className="p-3 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 transition-all">
               <Mail className="h-5 w-5 md:h-6 md:w-6" />

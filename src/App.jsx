@@ -22,7 +22,6 @@ import {
   ArrowRight,
   Send,
   Download,
-  ChevronDown,
   ChevronRight,
   ChevronUp,
   Users,

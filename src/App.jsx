@@ -136,6 +136,105 @@ const experiences = [
 
 const projects = [
   {
+    title: "VidyaFlow ERP",
+    subtitle: "Digital Shiksha — SaaS Educational Platform",
+    period: "2026",
+    tech: ["React", "Node.js", "MongoDB", "Geofencing", "Live Streaming", "SaaS Architecture"],
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=500&fit=crop",
+    highlights: ["SaaS Platform", "Geofencing Attendance", "Built at ZootechX"],
+    shortDesc: "Comprehensive SaaS ERP for coaching institutes and schools — featuring geofencing-based attendance, live lectures, and complete academic management.",
+    overview: "VidyaFlow ERP (Digital Shiksha) is a full-featured SaaS educational platform developed under ZootechX, designed to digitize and streamline operations for coaching institutes, schools, and educational service providers. The system features geofencing-based staff attendance, live lecture management, complete academic tools, and a dedicated parent portal — all unified in a single powerful dashboard.",
+    features: [
+      {
+        title: "Geofencing-Based Staff Attendance",
+        points: [
+          "Admin defines geofence boundaries for the institute premises",
+          "Staff attendance auto-marked as present upon entering the geofenced zone",
+          "Eliminates proxy attendance for teachers and staff",
+          "Real-time attendance logs with timestamps and GPS location data"
+        ]
+      },
+      {
+        title: "Academic Management Suite",
+        points: [
+          "Notes, assignments, and study material uploads per course",
+          "Mock tests with automated result generation and analytics",
+          "Exam scheduling and marks/results management",
+          "Timetable creation and management for students and faculty"
+        ]
+      },
+      {
+        title: "Live Lectures & Communication",
+        points: [
+          "Create and conduct live lecture sessions within the platform",
+          "Announcements broadcast to students, staff, and parents",
+          "Course-wise content organization and access control",
+          "Faculty and staff management with role-based access"
+        ]
+      },
+      {
+        title: "Fees & Parent Portal",
+        points: [
+          "End-to-end fee management with payment tracking and receipts",
+          "Dedicated parent portal to monitor child's academic progress",
+          "Attendance reports and performance analytics visible to parents",
+          "Subject-wise score insights and progress tracking"
+        ]
+      }
+    ],
+    github: "https://www.zootechx.com"
+  },
+  {
+    title: "Alumni Connect",
+    subtitle: "Hackathon Winning Alumni Network Platform",
+    period: "2026",
+    tech: ["React Native", "Twilio SDK", "Razorpay", "LinkedIn Scraper", "WhatsApp API", "Node.js"],
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=500&fit=crop",
+    highlights: ["\ud83c\udfc6 1st Prize — Full Stack", "Web + Mobile App", "Hackathon Winner"],
+    shortDesc: "Award-winning alumni networking platform with live streaming, video conferencing, donations, and intelligent LinkedIn profile matching.",
+    overview: "Alumni Connect is a hackathon-winning project (1st Prize — Full Stack Domain) that bridges the gap between college alumni and current students. Built with React Native for cross-platform mobile and web, the system provides dedicated apps for alumni and students, enabling live interactions, mentorship, donations, and intelligent alumni discovery through LinkedIn integration.",
+    features: [
+      {
+        title: "Live Streaming & Events",
+        points: [
+          "Alumni host live streams for TED talks, mentoring, and knowledge sharing",
+          "Students join sessions in real time to gain industry insights",
+          "Twilio Video Conferencing SDK integration for room-based online events",
+          "Event scheduling, RSVP management, and session recordings"
+        ]
+      },
+      {
+        title: "Donations & Fundraising",
+        points: [
+          "Alumni donation portal powered by Razorpay payment gateway",
+          "Transparent fund tracking for college initiatives and projects",
+          "Multiple payment options with automated receipt generation",
+          "Campaign-based fundraising with progress tracking"
+        ]
+      },
+      {
+        title: "LinkedIn Scraper & Smart Matching",
+        points: [
+          "Custom-built LinkedIn profile scraper for alumni discovery",
+          "Input-based search returns best-matched alumni profiles",
+          "Intelligent matching helps students find relevant industry mentors",
+          "Profile data enrichment for comprehensive alumni database"
+        ]
+      },
+      {
+        title: "WhatsApp & Cross-Platform Communication",
+        points: [
+          "Announcements broadcast directly to WhatsApp",
+          "Instant notifications for events, live sessions, and updates",
+          "Separate dedicated apps for alumni and students",
+          "Seamless cross-platform messaging and engagement"
+        ]
+      }
+    ],
+    team: "Darshan Jain \u00b7 Yash Jadhav \u00b7 Chetna Padhi \u00b7 Vaishnavi Sawant",
+    github: "https://www.linkedin.com/posts/chetna-padhi_firsthackathon-hackathonwin-fullcirclemoment-ugcPost-7426556267416096768-5Ni3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEvJwSkBaODFNPvvsp1E7K3vn3sV3eRH9wA"
+  },
+  {
     title: "Attendify",
     subtitle: "Smart Attendance Management System",
     period: "2025",
@@ -329,6 +428,13 @@ const projects = [
 
 const rewards = [
   {
+    title: "Alumni Connect — 1st Prize",
+    subtitle: "Full Stack Domain — Hackathon Winner",
+    year: "2026",
+    link: "https://www.linkedin.com/posts/chetna-padhi_firsthackathon-hackathonwin-fullcirclemoment-ugcPost-7426556267416096768-5Ni3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEvJwSkBaODFNPvvsp1E7K3vn3sV3eRH9wA",
+    icon: <Award className="w-5 h-5" />
+  },
+  {
     title: "Research Paper",
     subtitle: "Revolutionizing Home Safety: A Study on AI-Powered House Security (2023)",
     year: "2023",
@@ -430,6 +536,9 @@ function PortfolioContent() {
 
   useEffect(() => {
     setMounted(true);
+    // Initialize EmailJS
+    emailjs.init('z0LVHCV9bqVXwFm4R');
+    
     const handleScroll = () => setShowScrollTop(window.scrollY > 500);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -442,8 +551,8 @@ function PortfolioContent() {
     setFormStatus({ submitting: true, submitted: false, error: null });
 
     try {
-      // Initialize EmailJS with public key
-      emailjs.init('z0LVHCV9bqVXwFm4R');
+      // Execute reCAPTCHA v3
+      const recaptchaToken = await window.grecaptcha.execute('6Lef4E4sAAAAALGY9I52ls0Ao-mMpJk-HR4f60Wp', { action: 'submit' });
 
       // Prepare template parameters
       const templateParams = {
@@ -452,21 +561,28 @@ function PortfolioContent() {
         subject: formData.subject || 'New Portfolio Contact',
         message: formData.message,
         current_date: new Date().toLocaleString(),
+        'g-recaptcha-response': recaptchaToken
       };
 
+      console.log('Sending email with params:', templateParams);
+
       // Send email using EmailJS
-      await emailjs.send(
-        'service_xbdclad',  // Service ID
-        'template_81yjihd', // Template ID
-        templateParams
+      const response = await emailjs.send(
+        'service_xbdclad',
+        'template_81yjihd',
+        templateParams,
+        'z0LVHCV9bqVXwFm4R'
       );
 
+      console.log('EmailJS Response:', response);
       setFormStatus({ submitting: false, submitted: true, error: null });
       setFormData({ name: '', email: '', subject: '', message: '' });
       setTimeout(() => setFormStatus({ submitting: false, submitted: false, error: null }), 5000);
     } catch (error) {
-      console.error('EmailJS Error:', error);
-      setFormStatus({ submitting: false, submitted: false, error: 'Failed to send message. Please try again.' });
+      console.error('EmailJS Error Details:', error);
+      console.error('Error status:', error.status);
+      console.error('Error text:', error.text);
+      setFormStatus({ submitting: false, submitted: false, error: `Failed to send: ${error.text || error.message || 'Please try again'}` });
     }
   };
 
@@ -613,6 +729,31 @@ function PortfolioContent() {
               <Mail className="h-5 w-5 md:h-6 md:w-6" />
             </a>
           </div>
+
+          {/* Enhanced Scroll Indicator */}
+          <motion.div 
+            className="pt-16"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+          >
+            <a 
+              href="#about" 
+              onClick={(e) => { e.preventDefault(); document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' }); }}
+              className="flex flex-col items-center gap-3 group"
+            >
+              <div className="flex flex-col items-center gap-2">
+                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors">Explore More</span>
+                <div className="w-8 h-12 rounded-full border-2 border-gray-300 dark:border-gray-700 group-hover:border-gray-500 dark:group-hover:border-gray-500 transition-colors flex items-start justify-center p-2">
+                  <motion.div
+                    animate={{ y: [0, 12, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                    className="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600 group-hover:bg-gray-600 dark:group-hover:bg-gray-400 transition-colors"
+                  />
+                </div>
+              </div>
+            </a>
+          </motion.div>
         </motion.div>
       </section>
 
@@ -646,7 +787,7 @@ function PortfolioContent() {
                   <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">Internships</p>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-3xl md:text-4xl font-black text-black dark:text-white">7+</p>
+                  <p className="text-3xl md:text-4xl font-black text-black dark:text-white">9+</p>
                   <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">Projects</p>
                 </div>
                 <div className="space-y-2">
@@ -961,7 +1102,6 @@ function PortfolioContent() {
                   <input 
                     type="email" 
                     required 
-                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                     placeholder="john@example.com"
                     className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-white transition-colors text-white placeholder:text-gray-500"
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -1048,12 +1188,6 @@ function PortfolioContent() {
               <div className="relative h-48 bg-gradient-to-br from-gray-900 to-gray-800">
                 <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-full object-cover opacity-60" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent" />
-                <button
-                  onClick={() => setSelectedProject(null)}
-                  className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center hover:bg-white hover:text-black transition-all z-20"
-                >
-                  <X className="w-4 h-4" />
-                </button>
                 <div className="absolute bottom-4 left-4 right-4 md:left-6 md:right-6">
                   <div className="flex flex-wrap gap-2 mb-2">
                     {selectedProject.highlights?.map((highlight, idx) => (
@@ -1086,7 +1220,7 @@ function PortfolioContent() {
 
                 {/* Team & Mentors */}
                 {(selectedProject.team || selectedProject.mentors) && (
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {selectedProject.team && (
                       <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
                         <div className="flex items-center gap-2 mb-2">
@@ -1112,7 +1246,7 @@ function PortfolioContent() {
                 {selectedProject.features && (
                   <div className="space-y-4">
                     <h3 className="text-xs font-bold uppercase tracking-wide text-gray-500">Key Features</h3>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {selectedProject.features.map((feature, idx) => (
                         <div key={idx} className="p-4 border border-gray-200 dark:border-white/10 rounded-xl hover:border-gray-400 dark:hover:border-white/30 transition-colors">
                           <h4 className="text-sm font-bold mb-3">{feature.title}</h4>
@@ -1120,7 +1254,7 @@ function PortfolioContent() {
                             {feature.points.slice(0, 3).map((point, pidx) => (
                               <li key={pidx} className="flex items-start gap-2 text-xs text-gray-600 dark:text-gray-400">
                                 <CheckCircle2 className="w-3 h-3 text-green-500 mt-0.5 shrink-0" />
-                                <span className="line-clamp-2">{point}</span>
+                                <span>{point}</span>
                               </li>
                             ))}
                             {feature.points.length > 3 && (

@@ -139,7 +139,7 @@ const projects = [
     subtitle: "Digital Shiksha — SaaS Educational Platform",
     period: "2026",
     tech: ["React", "Node.js", "MongoDB", "Geofencing", "Live Streaming", "SaaS Architecture"],
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&h=500&fit=crop",
+    image: "Vidyaflow.png",
     highlights: ["SaaS Platform", "Geofencing Attendance", "Built at ZootechX"],
     shortDesc: "Comprehensive SaaS ERP for coaching institutes and schools — featuring geofencing-based attendance, live lectures, and complete academic management.",
     overview: "VidyaFlow ERP (Digital Shiksha) is a full-featured SaaS educational platform developed under ZootechX, designed to digitize and streamline operations for coaching institutes, schools, and educational service providers. The system features geofencing-based staff attendance, live lecture management, complete academic tools, and a dedicated parent portal — all unified in a single powerful dashboard.",
@@ -1286,7 +1286,7 @@ function PortfolioContent() {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 bg-black dark:bg-white text-white dark:text-black rounded-full shadow-lg z-50 flex items-center justify-center hover:scale-110 active:scale-95 transition-all"
+          className="fixed bottom-24 right-8 w-12 h-12 bg-black dark:bg-white text-white dark:text-black rounded-full shadow-lg z-50 flex items-center justify-center hover:scale-110 active:scale-95 transition-all"
         >
           <ArrowUp className="w-5 h-5" />
         </button>

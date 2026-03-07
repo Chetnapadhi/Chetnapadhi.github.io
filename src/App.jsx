@@ -536,7 +536,7 @@ function PortfolioContent() {
   useEffect(() => {
     setMounted(true);
     // Initialize EmailJS
-    emailjs.init('z0LVHCV9bqVXwFm4Ri');
+    emailjs.init('z0LVHCV9bqVXwFm4R');
     
     const handleScroll = () => setShowScrollTop(window.scrollY > 500);
     window.addEventListener('scroll', handleScroll);
@@ -564,7 +564,7 @@ function PortfolioContent() {
         'service_xbdclad',
         'template_81yjihd',
         templateParams,
-        'z0LVHCV9bqVXwFm4Ri'
+        'z0LVHCV9bqVXwFm4R'
       );
 
       console.log('EmailJS Response:', response);

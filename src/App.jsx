@@ -536,7 +536,7 @@ function PortfolioContent() {
   useEffect(() => {
     setMounted(true);
     // Initialize EmailJS
-    emailjs.init('z0LVHCV9bqVXwFm4R');
+    emailjs.init('z0LVHCV9bqVXwFm4Ri');
     
     const handleScroll = () => setShowScrollTop(window.scrollY > 500);
     window.addEventListener('scroll', handleScroll);
@@ -570,7 +570,7 @@ function PortfolioContent() {
         'service_xbdclad',
         'template_81yjihd',
         templateParams,
-        'z0LVHCV9bqVXwFm4R'
+        'z0LVHCV9bqVXwFm4Ri'
       );
 
       console.log('EmailJS Response:', response);
@@ -724,7 +724,7 @@ function PortfolioContent() {
             <a href="https://www.linkedin.com/in/chetna-padhi/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 transition-all">
               <Linkedin className="h-5 w-5 md:h-6 md:w-6" />
             </a>
-            <a href="mailto:padhichetn@gmail.com" className="p-3 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 transition-all">
+            <a href="mailto:padhichetna@gmail.com" className="p-3 rounded-full border border-gray-300 dark:border-white/20 hover:bg-gray-100 dark:hover:bg-white/10 transition-all">
               <Mail className="h-5 w-5 md:h-6 md:w-6" />
             </a>
           </div>
@@ -1035,7 +1035,7 @@ function PortfolioContent() {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-gray-500">Email</p>
-                    <a href="mailto:padhichetn@gmail.com" className="text-xl font-bold hover:text-cyan-500 transition-colors">padhichetn@gmail.com</a>
+                    <a href="mailto:padhichetna@gmail.com" className="text-xl font-bold hover:text-cyan-500 transition-colors">padhichetna@gmail.com</a>
                   </div>
                 </div>
                 <div className="flex items-center gap-6">

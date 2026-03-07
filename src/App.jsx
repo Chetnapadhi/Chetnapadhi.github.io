@@ -550,20 +550,14 @@ function PortfolioContent() {
     setFormStatus({ submitting: true, submitted: false, error: null });
 
     try {
-      // Execute reCAPTCHA v3
-      const recaptchaToken = await window.grecaptcha.execute('6Lef4E4sAAAAALGY9I52ls0Ao-mMpJk-HR4f60Wp', { action: 'submit' });
-
       // Prepare template parameters
       const templateParams = {
         from_name: formData.name,
         reply_to: formData.email,
         subject: formData.subject || 'New Portfolio Contact',
         message: formData.message,
-        current_date: new Date().toLocaleString(),
-        'g-recaptcha-response': recaptchaToken
+        current_date: new Date().toLocaleString()
       };
-
-      console.log('Sending email with params:', templateParams);
 
       // Send email using EmailJS
       const response = await emailjs.send(

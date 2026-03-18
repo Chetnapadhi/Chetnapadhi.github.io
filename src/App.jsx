@@ -701,7 +701,7 @@ function PortfolioContent() {
           
           <div className="flex flex-wrap justify-center gap-3 md:gap-4 pt-8 md:pt-10 w-full">
             <Button asChild size="lg" className="rounded-full bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 shadow-lg px-6 md:px-8 py-5 md:py-6 text-sm md:text-lg font-bold transition-all hover:scale-105">
-              <a href="https://drive.google.com/file/d/14Eo0jNvX_-3Vwc88o9zW3WEGfQLJ1fJ5/view?usp=sharing" target="_blank" rel="noreferrer">
+              <a href="https://drive.google.com/file/d/1H_wlkyV9Ev_Ktfd5yldsx00Kn-KsYzUw/view?usp=sharing" target="_blank" rel="noreferrer">
                 <Download className="mr-2 h-4 w-4 md:h-5 md:w-5" /> Resume
               </a>
             </Button>
